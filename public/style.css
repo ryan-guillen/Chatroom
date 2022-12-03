@@ -1,0 +1,134 @@
+body { 
+    margin: 0; 
+    font-family: "Segoe UI", Roboto, Helvetica, Arial, sans-serif; 
+    width: 100vw;
+    height: 100vh;
+    background-color: rgb(62, 58, 99);
+    display: flex;
+    flex-flow: column;
+}
+
+#top {
+    height: 80px;
+    background-image: url("resources/rainbow.png");
+    background-size: 80px;
+}
+
+#top h2 {
+    text-align: center;
+    color: rgb(233, 233, 233);
+}
+
+#main {
+    flex: 1;
+    display: flex;
+    overflow: hidden;
+    width: 100%;
+    height: 100%;
+}
+
+#main > div {
+    border: 2px solid rgb(99, 42, 255); 
+}
+
+#game {
+    flex: 1;
+    height: 100%;
+    display: flex;
+    flex-flow: column;
+}
+
+#game > div {
+    flex: 1;
+    border: 2px solid rgb(99, 42, 255); 
+}
+
+#game > div h2 {
+    text-align: center;
+}
+
+#game > div p {
+    text-align: center;
+}
+
+#game > div .rps_player {
+    text-align: center;
+}
+
+#game > div .rps_player button {
+    background-color: rgb(226, 96, 35);
+    color: black;
+    font-size: 5rem;
+
+    padding: 5px 16px;
+    border: 5px solid;
+    border-radius: 15%;
+}
+
+#chat {
+    width: 360px;
+    height: 100%;
+    display: flex;
+    flex-flow: column;
+    overflow: hidden;
+    align-items: stretch;
+}
+
+#chat #online_users {
+    background-color: rgba(0, 0, 0, 0.4);
+    height: 3em;
+    color: rgb(233, 233, 233);
+}
+
+#chat #messages {
+    flex: 1;
+    overflow-y: auto;
+    color: rgb(233, 233, 233);
+}
+
+#chat #messages > div {
+    padding: 0.5rem 1rem;
+    word-wrap: break-word;
+}
+#chat #messages > div:nth-child(odd) {
+    background: rgba(0, 0, 0, 0.15);
+}
+
+#chat #input {
+    display: flex;
+    height: 3em;
+}
+
+#chat #input > textarea { 
+    flex: 1;
+    resize: none;
+    border: none;
+    height: 3em;
+    background-color: rgba(0, 0, 0, 0.4);
+    color: rgb(233, 233, 233);
+    font-family: "Segoe UI", Roboto, Helvetica, Arial, sans-serif; 
+}
+
+.modal {
+    display: block;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgb(0,0,0);
+    background-color: rgba(0,0,0,0.4);
+}
+
+.modal-content {
+    background-color: rgb(129, 124, 122);
+    margin: 15% auto;
+    padding: 20px;
+    border: 3px solid rgb(0, 0, 0);
+    border-radius: 3px;
+    width: 50%;
+    text-align: center;
+}
+
